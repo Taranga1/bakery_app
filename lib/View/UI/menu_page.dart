@@ -56,9 +56,14 @@ class _MenuPageState extends State<MenuPage> {
                     leading: Icon(Icons.restaurant_menu),
                   ),
                 ),
-                ListTile(
-                  title: Text("Notification"),
-                  leading: Icon(Icons.notifications),
+                GestureDetector(
+                  onTap: () {
+                    Navigator.pushNamed(context, "second");
+                  },
+                  child: ListTile(
+                    title: Text("Notification"),
+                    leading: Icon(Icons.notifications),
+                  ),
                 ),
                 ListTile(
                   title: Text("Payments"),
