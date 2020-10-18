@@ -1,6 +1,6 @@
 import 'dart:ui';
 import 'package:bakery_app/View/UI/login_page1.dart';
-import 'package:bakery_app/View/UI/login_signin_animation.dart';
+import 'package:bakery_app/View/UI/Page_animation.dart';
 import 'package:bakery_app/View/UI/sign_up_page.dart';
 
 import 'package:flutter/material.dart';

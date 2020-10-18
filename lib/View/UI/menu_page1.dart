@@ -1,6 +1,7 @@
 import 'dart:ui';
 
 import 'package:bakery_app/View/UI/clicked_page.dart';
+import 'package:bakery_app/View/UI/Page_animation.dart';
 import 'package:bakery_app/models/Product_model.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -232,6 +233,20 @@ class _MenuPage1State extends State<MenuPage1> {
   Widget build(BuildContext context) {
     return Column(
       children: [
+        Text(
+          "Today's Menu",
+          style: GoogleFonts.gugi(
+            textStyle: TextStyle(
+              color: Color(0xff09bfe3),
+              fontSize: 20,
+              fontWeight: FontWeight.bold,
+            ),
+            decoration: TextDecoration.underline,
+          ),
+        ),
+        SizedBox(
+          height: 12,
+        ),
         ListView.builder(
           shrinkWrap: true,
           physics: NeverScrollableScrollPhysics(),
@@ -245,20 +260,19 @@ class _MenuPage1State extends State<MenuPage1> {
                   child: GestureDetector(
                     onTap: () {
                       Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => ClickedPage(
-                                    description:
-                                        productdetails[index].description,
-                                    image: productdetails[index].image,
-                                    location: productdetails[index].location,
-                                    discount: productdetails[index].discount,
-                                    markedprice:
-                                        productdetails[index].markedprice,
-                                    sellingprice:
-                                        productdetails[index].sellingprice,
-                                    name: productdetails[index].name,
-                                  )));
+                        context,
+                        BouncyAnimations(
+                          widget: ClickedPage(
+                            description: productdetails[index].description,
+                            image: productdetails[index].image,
+                            location: productdetails[index].location,
+                            discount: productdetails[index].discount,
+                            markedprice: productdetails[index].markedprice,
+                            sellingprice: productdetails[index].sellingprice,
+                            name: productdetails[index].name,
+                          ),
+                        ),
+                      );
                     },
                     child: Container(
                       height: 120,
@@ -313,7 +327,7 @@ class _MenuPage1State extends State<MenuPage1> {
                                                         letterSpacing: 1,
                                                         fontWeight:
                                                             FontWeight.w600,
-                                                        fontSize: 18,
+                                                        fontSize: 16,
                                                       ),
                                                     ),
                                                   ),

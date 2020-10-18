@@ -1,4 +1,6 @@
-import 'package:bakery_app/View/UI/cart_page.dart';
+import 'package:bakery_app/View/UI/Page_animation.dart';
+import 'package:bakery_app/View/UI/login_page.dart';
+import 'package:bakery_app/View/UI/logout_alert_dialoge.dart';
 import 'package:bakery_app/View/UI/menu_page1.dart';
 import 'package:carousel_pro/carousel_pro.dart';
 import 'package:flutter/material.dart';
@@ -15,10 +17,7 @@ class _MenuPageState extends State<MenuPage> {
     return SafeArea(
       child: Scaffold(
         floatingActionButton: FloatingActionButton(
-          onPressed: () {
-            Navigator.push(
-                context, MaterialPageRoute(builder: (context) => Cartpage()));
-          },
+          onPressed: () {},
           child: Icon(
             Icons.shopping_cart,
           ),
@@ -47,9 +46,15 @@ class _MenuPageState extends State<MenuPage> {
                     backgroundImage: AssetImage("images/user.png"),
                   ),
                 ),
-                ListTile(
-                  title: Text("Menu"),
-                  leading: Icon(Icons.restaurant_menu),
+                GestureDetector(
+                  onTap: () {
+                    Navigator.push(
+                        context, BouncyAnimations(widget: MenuPage()));
+                  },
+                  child: ListTile(
+                    title: Text("Menu"),
+                    leading: Icon(Icons.restaurant_menu),
+                  ),
                 ),
                 ListTile(
                   title: Text("Notification"),
@@ -71,9 +76,18 @@ class _MenuPageState extends State<MenuPage> {
                   thickness: 2,
                   color: Colors.grey,
                 ),
-                ListTile(
-                  title: Text("Logout"),
-                  leading: Icon(Icons.logout),
+                GestureDetector(
+                  onTap: () {
+                    showDialog(
+                      context: context,
+                      builder: (_) => LogoutAlertPage(),
+                      barrierDismissible: true,
+                    );
+                  },
+                  child: ListTile(
+                    title: Text("Logout"),
+                    leading: Icon(Icons.logout),
+                  ),
                 ),
                 Center(
                   child: Image.asset(
@@ -89,31 +103,23 @@ class _MenuPageState extends State<MenuPage> {
         appBar: AppBar(
           backgroundColor: Colors.deepOrange,
           centerTitle: true,
-          title: Text("Bakery App"),
+          title: Text("Nandan Bakery"),
           actions: [
             Row(
               children: [
-                Icon(
-                  FontAwesome.user_circle,
-                  color: Colors.white,
-                  size: 28,
-                ),
-                SizedBox(
-                  width: 16,
-                ),
                 InkWell(
                   onTap: () {
-                    Navigator.push(context,
-                        MaterialPageRoute(builder: (context) => Cartpage()));
+                    Navigator.push(
+                        context, BouncyAnimations(widget: LoginPage()));
                   },
                   child: Icon(
-                    Icons.shopping_cart,
-                    size: 28,
+                    FontAwesome.user_circle,
                     color: Colors.white,
+                    size: 28,
                   ),
                 ),
                 SizedBox(
-                  width: 8,
+                  width: 16,
                 ),
               ],
             ),

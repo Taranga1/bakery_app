@@ -1,5 +1,7 @@
+import 'package:bakery_app/View/UI/menu_page.dart';
+
 import 'login_page.dart';
-import 'package:bakery_app/View/UI/login_signin_animation.dart';
+import 'package:bakery_app/View/UI/Page_animation.dart';
 import 'package:flutter/material.dart';
 
 class SignUp1 extends StatefulWidget {
@@ -18,7 +20,10 @@ class _SignUp1State extends State<SignUp1> {
           child: ClipRRect(
             borderRadius: BorderRadius.circular(26),
             child: InkWell(
-              onTap: () {},
+              onTap: () {
+                Navigator.pop(context,
+                    MaterialPageRoute(builder: (context) => MenuPage()));
+              },
               child: Container(
                 height: 50,
                 width: MediaQuery.of(context).size.width - 200,

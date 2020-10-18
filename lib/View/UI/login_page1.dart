@@ -1,4 +1,4 @@
-import 'package:bakery_app/View/UI/login_signin_animation.dart';
+import 'package:bakery_app/View/UI/Page_animation.dart';
 import 'package:bakery_app/View/UI/sign_up_page.dart';
 
 import 'package:flutter/material.dart';
@@ -99,10 +99,7 @@ class _LoginPage1State extends State<LoginPage1> {
             ],
           ),
           onTap: () {
-            Navigator.push(
-              context,
-              BouncyAnimations(widget: SignUp()),
-            );
+            Navigator.popAndPushNamed(context, "first");
           },
         ),
       ],

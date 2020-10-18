@@ -1,6 +1,6 @@
 import 'dart:ui';
 import 'login_page.dart';
-import 'package:bakery_app/View/UI/login_signin_animation.dart';
+import 'package:bakery_app/View/UI/Page_animation.dart';
 import 'package:bakery_app/View/UI/sign_up_page1.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_icons/flutter_icons.dart';
@@ -18,7 +18,7 @@ class _SignUpState extends State<SignUp> {
         scrollDirection: Axis.vertical,
         children: [
           Container(
-            height: 1000,
+            height: 1100,
             width: 1000,
             color: Colors.red,
             child: Column(
@@ -60,7 +60,7 @@ class _SignUpState extends State<SignUp> {
                         child:
                             // Downward lower white container
                             Container(
-                          height: 800,
+                          height: 900,
                           width: MediaQuery.of(context).size.width,
                           color: Colors.white,
                           child: Column(
@@ -178,6 +178,25 @@ class _SignUpState extends State<SignUp> {
                                       size: 23,
                                     ),
                                     labelText: "  Password",
+                                  ),
+                                ),
+                              ),
+
+                              // Name of resturant textfield
+                              Padding(
+                                padding: const EdgeInsets.only(
+                                    top: 40, left: 20, right: 20),
+                                child: TextField(
+                                  decoration: InputDecoration(
+                                    border: OutlineInputBorder(
+                                        borderRadius: BorderRadius.all(
+                                            Radius.circular(12))),
+                                    prefixIcon: Icon(
+                                      Icons.person_pin,
+                                      color: Colors.deepOrange,
+                                      size: 26,
+                                    ),
+                                    labelText: "  Name of Restaurant",
                                   ),
                                 ),
                               ),

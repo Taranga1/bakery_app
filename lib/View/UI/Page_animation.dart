@@ -4,7 +4,7 @@ class BouncyAnimations extends PageRouteBuilder {
   final Widget widget;
   BouncyAnimations({this.widget})
       : super(
-          transitionDuration: Duration(seconds: 1),
+          transitionDuration: Duration(seconds: 2),
           transitionsBuilder: (BuildContext context,
               Animation<double> animation,
               Animation<double> secAnimation,

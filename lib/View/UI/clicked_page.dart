@@ -1,3 +1,4 @@
+import 'package:bakery_app/View/UI/buy_alert_dialog.dart';
 import 'package:bakery_app/models/Product_model.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_icons/flutter_icons.dart';
@@ -31,30 +32,43 @@ class _ClickedPageState extends State<ClickedPage> {
       bottomSheet: Row(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          Container(
-            height: 50,
-            width: MediaQuery.of(context).size.width,
-            color: Colors.deepOrange,
-            child: Center(
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Icon(
-                    Icons.shopping_cart,
-                    color: Colors.white,
-                    size: 30,
+          ClipRRect(
+            borderRadius: BorderRadius.circular(1),
+            child: InkWell(
+              onTap: () {
+                showDialog(
+                  context: context,
+                  builder: (_) => BuyAlertPage(),
+                  barrierDismissible: true,
+                  barrierColor: Colors.transparent,
+                );
+              },
+              child: Container(
+                height: 50,
+                width: MediaQuery.of(context).size.width,
+                color: Colors.deepOrange,
+                child: Center(
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Icon(
+                        Icons.shopping_cart,
+                        color: Colors.white,
+                        size: 30,
+                      ),
+                      SizedBox(
+                        width: 12,
+                      ),
+                      Text(
+                        "Place Order",
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 22,
+                        ),
+                      ),
+                    ],
                   ),
-                  SizedBox(
-                    width: 12,
-                  ),
-                  Text(
-                    "Add to kart",
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 22,
-                    ),
-                  ),
-                ],
+                ),
               ),
             ),
           ),
@@ -64,7 +78,7 @@ class _ClickedPageState extends State<ClickedPage> {
         scrollDirection: Axis.vertical,
         children: [
           Container(
-            height: 800,
+            height: 1000,
             width: 1000,
             color: Colors.deepOrange,
             child: Column(
@@ -106,7 +120,7 @@ class _ClickedPageState extends State<ClickedPage> {
                         child:
                             // Downward lower white container
                             Container(
-                          height: 550,
+                          height: 750,
                           width: MediaQuery.of(context).size.width,
                           color: Colors.white,
                           child: Column(
@@ -180,24 +194,43 @@ class _ClickedPageState extends State<ClickedPage> {
                                               ),
                                             ),
                                       SizedBox(
-                                        width: 50,
+                                        width: 20,
                                       ),
-                                      ClipRRect(
-                                        borderRadius: BorderRadius.circular(26),
-                                        child: Container(
-                                          height: 40,
-                                          width: 100,
-                                          color: Colors.deepOrange,
-                                          child: Center(
-                                            child: Text(
-                                              "Buy",
-                                              style: TextStyle(
-                                                color: Colors.white,
-                                                fontSize: 22,
-                                              ),
+                                      Row(
+                                        children: [
+                                          Container(
+                                            height: 40,
+                                            width: 130,
+                                            color: Colors.transparent,
+                                            child: Row(
+                                              children: [
+                                                Icon(
+                                                  Icons.add_circle_outline,
+                                                  color: Colors.black54,
+                                                ),
+                                                SizedBox(
+                                                  width: 6,
+                                                ),
+                                                Container(
+                                                  height: 20,
+                                                  width: 70,
+                                                  child: TextField(
+                                                    decoration: InputDecoration(
+                                                      hintText: "Quantity",
+                                                    ),
+                                                  ),
+                                                ),
+                                                SizedBox(
+                                                  width: 6,
+                                                ),
+                                                Icon(
+                                                  Icons.do_disturb_on_outlined,
+                                                  color: Colors.black54,
+                                                ),
+                                              ],
                                             ),
                                           ),
-                                        ),
+                                        ],
                                       ),
                                     ],
                                   ),
@@ -206,7 +239,7 @@ class _ClickedPageState extends State<ClickedPage> {
                               Row(
                                 children: [
                                   SizedBox(
-                                    width: 8,
+                                    width: 16,
                                   ),
                                   Column(
                                     children: [
@@ -214,9 +247,12 @@ class _ClickedPageState extends State<ClickedPage> {
                                         "Description",
                                         style: TextStyle(
                                           color: Colors.black,
-                                          fontSize: 22,
+                                          fontSize: 18,
                                           fontWeight: FontWeight.bold,
                                         ),
+                                      ),
+                                      SizedBox(
+                                        height: 10,
                                       ),
                                       Row(
                                         children: [
@@ -247,7 +283,44 @@ class _ClickedPageState extends State<ClickedPage> {
                                 ),
                               ),
                               SizedBox(
-                                height: 40,
+                                height: 10,
+                              ),
+                              Container(
+                                height: 60,
+                                width: MediaQuery.of(context).size.width - 30,
+                                color: Colors.transparent,
+                                child: Row(
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: [
+                                    Container(
+                                      height: 35,
+                                      width: 35,
+                                      child: CircleAvatar(
+                                        backgroundImage:
+                                            AssetImage("images/user.png"),
+                                        backgroundColor: Colors.transparent,
+                                        radius: 26,
+                                      ),
+                                    ),
+                                    SizedBox(
+                                      width: 8,
+                                    ),
+                                    Container(
+                                      height: 40,
+                                      width: MediaQuery.of(context).size.width *
+                                          0.8,
+                                      color: Colors.transparent,
+                                      child: TextField(
+                                        decoration: InputDecoration(
+                                          labelText: "Leave Public Review",
+                                          border: OutlineInputBorder(
+                                              borderRadius: BorderRadius.all(
+                                                  Radius.circular(12))),
+                                        ),
+                                      ),
+                                    ),
+                                  ],
+                                ),
                               ),
                             ],
                           ),
