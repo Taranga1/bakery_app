@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class BuyPage extends StatefulWidget {
   final String image;
@@ -32,12 +33,58 @@ class _BuyPageState extends State<BuyPage> {
             children: [
               Center(
                 child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
                     Container(
-                      height: MediaQuery.of(context).size.height - 20,
+                      height: MediaQuery.of(context).size.height - 60,
                       width: MediaQuery.of(context).size.width - 20,
-                      color: Colors.red,
+                      color: Colors.deepOrange,
+                      child: Column(
+                        children: [
+                          SizedBox(
+                            height: 8,
+                          ),
+                          Text(
+                            widget.name,
+                            style: GoogleFonts.gugi(
+                              textStyle: TextStyle(
+                                color: Colors.black,
+                                letterSpacing: 1,
+                                fontWeight: FontWeight.w600,
+                                fontSize: 22,
+                              ),
+                            ),
+                          ),
+                          SizedBox(
+                            height: 14,
+                          ),
+                          Row(
+                            children: [
+                              Text(
+                                "Quantity : ",
+                                style: GoogleFonts.gugi(
+                                  textStyle: TextStyle(
+                                    color: Colors.black,
+                                    letterSpacing: 1,
+                                    fontWeight: FontWeight.w600,
+                                    fontSize: 16,
+                                  ),
+                                ),
+                              ),
+                              Text(
+                                "2",
+                                style: GoogleFonts.gugi(
+                                  textStyle: TextStyle(
+                                    color: Colors.black,
+                                    letterSpacing: 1,
+                                    fontWeight: FontWeight.w600,
+                                    fontSize: 16,
+                                  ),
+                                ),
+                              ),
+                            ],
+                          ),
+                        ],
+                      ),
                     ),
                   ],
                 ),
