@@ -1,7 +1,5 @@
 import 'package:bakery_app/View/UI/buy_alert_dialog.dart';
-import 'package:bakery_app/models/Product_model.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_icons/flutter_icons.dart';
 
 class ClickedPage extends StatefulWidget {
   final String image;
@@ -290,16 +288,16 @@ class _ClickedPageState extends State<ClickedPage> {
                                 width: MediaQuery.of(context).size.width - 30,
                                 color: Colors.transparent,
                                 child: Row(
-                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  mainAxisAlignment: MainAxisAlignment.start,
                                   children: [
                                     Container(
-                                      height: 35,
-                                      width: 35,
+                                      height: 45,
+                                      width: 45,
                                       child: CircleAvatar(
                                         backgroundImage:
                                             AssetImage("images/user.png"),
                                         backgroundColor: Colors.transparent,
-                                        radius: 26,
+                                        radius: 32,
                                       ),
                                     ),
                                     SizedBox(
@@ -308,7 +306,7 @@ class _ClickedPageState extends State<ClickedPage> {
                                     Container(
                                       height: 40,
                                       width: MediaQuery.of(context).size.width *
-                                          0.8,
+                                          0.5,
                                       color: Colors.transparent,
                                       child: TextField(
                                         decoration: InputDecoration(

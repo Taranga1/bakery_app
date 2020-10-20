@@ -1,5 +1,5 @@
 import 'dart:ui';
-
+import 'package:bakery_app/View/UI/buy_page.dart';
 import 'package:bakery_app/View/UI/clicked_page.dart';
 import 'package:bakery_app/View/UI/Page_animation.dart';
 import 'package:bakery_app/models/Product_model.dart';
@@ -331,10 +331,17 @@ class _MenuPage1State extends State<MenuPage1> {
                                                       ),
                                                     ),
                                                   ),
-                                                  Icon(
-                                                    Icons.favorite_outline,
-                                                    color: Colors.deepOrange,
-                                                    size: 32,
+                                                  Row(
+                                                    mainAxisAlignment:
+                                                        MainAxisAlignment.end,
+                                                    children: [
+                                                      Icon(
+                                                        Icons.favorite_outline,
+                                                        color:
+                                                            Colors.deepOrange,
+                                                        size: 32,
+                                                      ),
+                                                    ],
                                                   ),
                                                 ],
                                               ),
@@ -390,12 +397,10 @@ class _MenuPage1State extends State<MenuPage1> {
                                                         ),
                                                 ],
                                               ),
-                                              SizedBox(
-                                                height: 5,
-                                              ),
                                               Row(
                                                 mainAxisAlignment:
-                                                    MainAxisAlignment.start,
+                                                    MainAxisAlignment
+                                                        .spaceBetween,
                                                 children: [
                                                   Container(
                                                     height: 15,
@@ -405,6 +410,68 @@ class _MenuPage1State extends State<MenuPage1> {
                                                       "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRukuQQLtPUJMjoDEfLm_sGpRC9Fp-tegUW3Q&usqp=CAU",
                                                       fit: BoxFit.fill,
                                                     ),
+                                                  ),
+                                                  Row(
+                                                    mainAxisAlignment:
+                                                        MainAxisAlignment.end,
+                                                    children: [
+                                                      ClipRRect(
+                                                        borderRadius:
+                                                            BorderRadius
+                                                                .circular(12),
+                                                        child: InkWell(
+                                                          onTap: () {
+                                                            Navigator.push(
+                                                              context,
+                                                              BouncyAnimations(
+                                                                widget: BuyPage(
+                                                                  description:
+                                                                      productdetails[
+                                                                              index]
+                                                                          .description,
+                                                                  image: productdetails[
+                                                                          index]
+                                                                      .image,
+                                                                  location: productdetails[
+                                                                          index]
+                                                                      .location,
+                                                                  discount: productdetails[
+                                                                          index]
+                                                                      .discount,
+                                                                  markedprice:
+                                                                      productdetails[
+                                                                              index]
+                                                                          .markedprice,
+                                                                  sellingprice:
+                                                                      productdetails[
+                                                                              index]
+                                                                          .sellingprice,
+                                                                  name: productdetails[
+                                                                          index]
+                                                                      .name,
+                                                                ),
+                                                              ),
+                                                            );
+                                                          },
+                                                          child: Container(
+                                                            height: 34,
+                                                            width: 80,
+                                                            color: Colors
+                                                                .deepOrange,
+                                                            child: Center(
+                                                              child: Text(
+                                                                "Buy",
+                                                                style: TextStyle(
+                                                                    color: Colors
+                                                                        .white,
+                                                                    fontSize:
+                                                                        18),
+                                                              ),
+                                                            ),
+                                                          ),
+                                                        ),
+                                                      ),
+                                                    ],
                                                   ),
                                                 ],
                                               ),

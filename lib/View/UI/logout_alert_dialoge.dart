@@ -1,5 +1,3 @@
-import 'package:bakery_app/View/UI/Page_animation.dart';
-import 'package:bakery_app/View/UI/login_page.dart';
 import 'package:flutter/material.dart';
 
 class LogoutAlertPage extends StatefulWidget {

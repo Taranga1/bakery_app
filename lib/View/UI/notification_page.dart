@@ -44,10 +44,36 @@ class _NotificationPageState extends State<NotificationPage> {
                             color: Colors.transparent,
                             child: Row(
                               children: [
+                                SizedBox(
+                                  width: 6,
+                                ),
                                 Icon(Icons.notifications_on,
                                     size: 35, color: Colors.deepOrange),
                                 SizedBox(
                                   width: 10,
+                                ),
+                                Column(
+                                  mainAxisAlignment: MainAxisAlignment.start,
+                                  children: [
+                                    SizedBox(
+                                      height: 6,
+                                    ),
+                                    Text(
+                                      notificationmodel[index].title,
+                                      style: TextStyle(
+                                        color: Colors.black,
+                                        fontWeight: FontWeight.w600,
+                                        fontSize: 18,
+                                      ),
+                                    ),
+                                    Text(
+                                      notificationmodel[index].time,
+                                      style: TextStyle(
+                                        color: Colors.grey,
+                                        fontSize: 18,
+                                      ),
+                                    ),
+                                  ],
                                 ),
                               ],
                             ),
