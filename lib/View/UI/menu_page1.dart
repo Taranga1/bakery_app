@@ -32,6 +32,7 @@ class _MenuPage1State extends State<MenuPage1> {
       location: "Bharatpur,Nepal",
       sellingprice: "RS 420",
       description: "HI there",
+      markedprice: "RS 420",
     ),
     ProductDetails(
       name: "Carrot Cake",
@@ -41,6 +42,7 @@ class _MenuPage1State extends State<MenuPage1> {
       location: "Bharatpur,Nepal",
       sellingprice: "RS 500",
       description: "HI there",
+      markedprice: "RS 500",
     ),
     ProductDetails(
       name: "Genoise Cake",
@@ -50,6 +52,7 @@ class _MenuPage1State extends State<MenuPage1> {
       location: "Bharatpur,Nepal",
       sellingprice: "RS 500",
       description: "HI there",
+      markedprice: "RS 500",
     ),
     ProductDetails(
         name: "Classic Pound Cake",
@@ -82,6 +85,7 @@ class _MenuPage1State extends State<MenuPage1> {
       image:
           "https://i.insider.com/5ada0bcebd967142008b46d7?width=1100&format=jpeg&auto=webp",
       sellingprice: "RS 25",
+      markedprice: "RS 25",
       description: "HI there",
     ),
     ProductDetails(
@@ -90,6 +94,7 @@ class _MenuPage1State extends State<MenuPage1> {
       image:
           "https://media2.s-nbcnews.com/j/newscms/2018_16/1332898/unicorn-cupcakes-today-041918-tease_607876a763a32491c1bf4bb7c8eab53e.today-inline-small2x.jpg",
       description: "HI there",
+      markedprice: "RS 25",
       sellingprice: "RS 25",
     ),
     ProductDetails(
@@ -99,11 +104,13 @@ class _MenuPage1State extends State<MenuPage1> {
           "https://preppykitchen.com/wp-content/uploads/2016/07/Chocolate-cupcakes-recipe-light.jpg",
       description: "HI there",
       sellingprice: "RS 25",
+      markedprice: "RS 25",
     ),
     ProductDetails(
       name: "Vanilla Cup Cake",
       discount: false,
       description: "HI there",
+      markedprice: "RS 25",
       image:
           "https://www.cookwithmanali.com/wp-content/uploads/2017/01/Eggless-Vanilla-Cupcakes-500x375.jpg",
       sellingprice: "RS 25",
@@ -112,12 +119,14 @@ class _MenuPage1State extends State<MenuPage1> {
       name: "Rainbow Cup Cake",
       discount: false,
       description: "HI there",
+      markedprice: "RS 25",
       image:
           "https://truffle-assets.imgix.net/pxqrocxwsjcc_5qda5ocefy4wwsoc6mc8i4_national-coming-out-day-cupcakes-no-graphic.jpg",
       sellingprice: "RS 25",
     ),
     ProductDetails(
       name: "Frap Cup Cake",
+      markedprice: "RS 25",
       discount: false,
       description: "HI there",
       image:
@@ -126,6 +135,7 @@ class _MenuPage1State extends State<MenuPage1> {
     ),
     ProductDetails(
       name: "Creamed Cup Cake",
+      markedprice: "RS 25",
       discount: false,
       description: "HI there",
       image:
@@ -135,6 +145,7 @@ class _MenuPage1State extends State<MenuPage1> {
     ProductDetails(
       name: "Mermaid Cake",
       discount: false,
+      markedprice: "RS 25",
       description: "HI there",
       image:
           "https://www.oetker.co.uk/Recipe/Recipes/oetker.co.uk/uk-en/baking/image-thumb__3238__RecipeDetail/mermaid-cupcakes.jpg",
@@ -142,6 +153,7 @@ class _MenuPage1State extends State<MenuPage1> {
     ),
     ProductDetails(
       name: "Bread",
+      markedprice: "RS 25",
       discount: false,
       description: "HI there",
       image:
@@ -150,6 +162,7 @@ class _MenuPage1State extends State<MenuPage1> {
     ),
     ProductDetails(
       name: "Aligator Bread",
+      markedprice: "RS 25",
       discount: false,
       description: "HI there",
       image:
@@ -158,6 +171,7 @@ class _MenuPage1State extends State<MenuPage1> {
     ),
     ProductDetails(
       name: "Doughnut",
+      markedprice: "RS 25",
       discount: false,
       description: "HI there",
       image:
@@ -166,6 +180,7 @@ class _MenuPage1State extends State<MenuPage1> {
     ),
     ProductDetails(
       name: "Choclate Doughnut",
+      markedprice: "RS 25",
       discount: false,
       description: "HI there",
       image:
@@ -176,6 +191,7 @@ class _MenuPage1State extends State<MenuPage1> {
       name: "Popcorn",
       discount: false,
       description: "HI there",
+      markedprice: "RS 25",
       image:
           "https://www.onceuponachef.com/images/2015/06/Crazy-Good-Spicy-Italian-Popcorn.jpg",
       sellingprice: "RS 25",
@@ -183,6 +199,7 @@ class _MenuPage1State extends State<MenuPage1> {
     ProductDetails(
       name: "Cheeese Popcorn",
       description: "HI there",
+      markedprice: "RS 25",
       discount: false,
       image:
           "https://d169bp7fx2b8qn.cloudfront.net/uploads/2020/05/Cheddar-Cheese-Popcorn-2-01382-1024x683.jpg",
@@ -190,6 +207,7 @@ class _MenuPage1State extends State<MenuPage1> {
     ),
     ProductDetails(
       name: "Choclate Roll",
+      markedprice: "RS 25",
       description: "HI there",
       discount: false,
       image:
@@ -199,6 +217,7 @@ class _MenuPage1State extends State<MenuPage1> {
     ProductDetails(
       name: "Cream Roll",
       discount: false,
+      markedprice: "RS 25",
       description: "HI there",
       image:
           "https://1.bp.blogspot.com/-GRN9BsjwCMg/XgFoVlnV2eI/AAAAAAAAdjQ/v2qG6blSx7cs3ImDrRPdsysOvjYRGbr5gCEwYBhgL/s1600/20191222_143318.jpg",
@@ -207,6 +226,7 @@ class _MenuPage1State extends State<MenuPage1> {
     ProductDetails(
       name: "Cinnamon Roll",
       discount: false,
+      markedprice: "RS 25",
       description: "HI there",
       image:
           "https://previews.123rf.com/images/greenartphotography/greenartphotography1612/greenartphotography161200045/68464581-cinnamon-roll-bread-buns-rolls-on-parchment-paper-homemade-bakery-top-view-sweet-homemade-christmas-.jpg",
@@ -215,6 +235,7 @@ class _MenuPage1State extends State<MenuPage1> {
     ProductDetails(
       name: "Sweets(Laddu)",
       description: "HI there",
+      markedprice: "RS 25",
       discount: false,
       image:
           "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Laddu_Sweet.JPG/400px-Laddu_Sweet.JPG",
@@ -223,6 +244,7 @@ class _MenuPage1State extends State<MenuPage1> {
     ProductDetails(
       name: "Coconut Laddu",
       description: "HI there",
+      markedprice: "RS 25",
       discount: false,
       image:
           "https://spicesnflavors.com/wp-content/uploads/2017/09/rose-ladoo-1-min.jpg",

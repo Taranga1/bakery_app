@@ -19,7 +19,10 @@ class _BuyAlertPageState extends State<BuyAlertPage> {
               Navigator.push(context, BouncyAnimations(widget: BuyPage()));
             },
             child: Text("Yes")),
-        FlatButton(onPressed: () {}, child: Text("No")),
+        FlatButton(
+          onPressed: () {},
+          child: Text("No"),
+        ),
       ],
       elevation: 24,
       backgroundColor: Colors.white,

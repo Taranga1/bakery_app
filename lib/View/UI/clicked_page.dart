@@ -306,14 +306,16 @@ class _ClickedPageState extends State<ClickedPage> {
                                     Container(
                                       height: 40,
                                       width: MediaQuery.of(context).size.width *
-                                          0.5,
+                                          0.7,
                                       color: Colors.transparent,
                                       child: TextField(
                                         decoration: InputDecoration(
                                           labelText: "Leave Public Review",
                                           border: OutlineInputBorder(
-                                              borderRadius: BorderRadius.all(
-                                                  Radius.circular(12))),
+                                            borderRadius: BorderRadius.all(
+                                              Radius.circular(12),
+                                            ),
+                                          ),
                                         ),
                                       ),
                                     ),
