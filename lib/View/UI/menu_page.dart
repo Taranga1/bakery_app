@@ -19,7 +19,7 @@ class _MenuPageState extends State<MenuPage> {
         floatingActionButton: FloatingActionButton(
           onPressed: () {},
           child: Icon(
-            Icons.shopping_cart,
+            Icons.mode_edit,
           ),
         ),
         drawer: Drawer(

@@ -1,4 +1,5 @@
 import 'package:bakery_app/View/UI/Page_animation.dart';
+import 'package:bakery_app/View/UI/bill_page.dart';
 import 'package:bakery_app/View/UI/buy_page.dart';
 import 'package:flutter/material.dart';
 
@@ -16,7 +17,7 @@ class _BuyAlertPageState extends State<BuyAlertPage> {
       actions: [
         FlatButton(
             onPressed: () {
-              Navigator.push(context, BouncyAnimations(widget: BuyPage()));
+              Navigator.push(context, BouncyAnimations(widget: BillPage()));
             },
             child: Text("Yes")),
         FlatButton(

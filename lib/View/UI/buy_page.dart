@@ -1,6 +1,6 @@
 import 'package:bakery_app/View/UI/Page_animation.dart';
 import 'package:bakery_app/View/UI/bill_page.dart';
-import 'package:bakery_app/models/Product_model.dart';
+import 'package:bakery_app/View/UI/menu_page.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -265,49 +265,57 @@ class _BuyPageState extends State<BuyPage> {
                           SizedBox(
                             height: 20,
                           ),
-                          Container(
-                            height: 80,
-                            width: MediaQuery.of(context).size.width - 30,
-                            decoration: BoxDecoration(
-                              border: Border(
-                                left: BorderSide(
-                                  width: 3,
-                                  color: Colors.grey,
-                                ),
-                                right: BorderSide(
-                                  width: 3,
-                                  color: Colors.grey,
-                                ),
-                                top: BorderSide(
-                                  width: 3,
-                                  color: Colors.grey,
-                                ),
-                                bottom: BorderSide(
-                                  width: 3,
-                                  color: Colors.grey,
-                                ),
-                              ),
-                            ),
-                            child: Row(
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              children: [
-                                Icon(
-                                  Icons.add,
-                                  size: 40,
-                                  color: Colors.grey,
-                                ),
-                                Text(
-                                  "Add Items",
-                                  style: GoogleFonts.gugi(
-                                    textStyle: TextStyle(
-                                      color: Colors.grey,
-                                      letterSpacing: 1,
-                                      fontWeight: FontWeight.w600,
-                                      fontSize: 16,
-                                    ),
+                          InkWell(
+                            onTap: () {
+                              Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (_) => MenuPage()));
+                            },
+                            child: Container(
+                              height: 80,
+                              width: MediaQuery.of(context).size.width - 30,
+                              decoration: BoxDecoration(
+                                border: Border(
+                                  left: BorderSide(
+                                    width: 3,
+                                    color: Colors.grey,
+                                  ),
+                                  right: BorderSide(
+                                    width: 3,
+                                    color: Colors.grey,
+                                  ),
+                                  top: BorderSide(
+                                    width: 3,
+                                    color: Colors.grey,
+                                  ),
+                                  bottom: BorderSide(
+                                    width: 3,
+                                    color: Colors.grey,
                                   ),
                                 ),
-                              ],
+                              ),
+                              child: Row(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
+                                  Icon(
+                                    Icons.add,
+                                    size: 40,
+                                    color: Colors.grey,
+                                  ),
+                                  Text(
+                                    "Add Items",
+                                    style: GoogleFonts.gugi(
+                                      textStyle: TextStyle(
+                                        color: Colors.grey,
+                                        letterSpacing: 1,
+                                        fontWeight: FontWeight.w600,
+                                        fontSize: 16,
+                                      ),
+                                    ),
+                                  ),
+                                ],
+                              ),
                             ),
                           ),
                         ],
