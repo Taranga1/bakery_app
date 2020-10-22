@@ -17,7 +17,7 @@ class _BuyAlertPageState extends State<BuyAlertPage> {
       actions: [
         FlatButton(
             onPressed: () {
-              Navigator.push(context, BouncyAnimations(widget: BillPage()));
+              Navigator.push(context, BouncyAnimations(widget: BuyPage()));
             },
             child: Text("Yes")),
         FlatButton(
